@@ -154,7 +154,7 @@ h3 {
     margin: 0 auto;
     max-width: 1000px;
     padding: 0 1rem 1rem 1rem;
-/*
+    /*
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -393,7 +393,6 @@ ol {
 .flex-50-50 {
     display: flex;
     flex-direction: row;
-
     gap: 1rem;
 }
 
@@ -401,3 +400,51 @@ ol {
     width: 100%;
 }
 
+/*.blog-content {
+    column-count: 3;
+    column-gap: 2rem;
+    break-inside: avoid;*/
+/* older fallbacks: */
+/*-webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    max-width: none;
+}*/
+
+.blog-recap-content {
+    column-count: 1;
+    column-gap: 4rem;
+    word-wrap: anywhere;
+    max-width: 40rem;
+    display: block;
+    margin: 0 auto;
+}
+
+@media(min-width: 1200px) {
+    .blog-recap-content {
+        column-count: 3;
+        max-width: 100%;
+    }
+}
+
+.blog-recap-content header, .blog-recap-content footer {
+    column-span: all;
+}
+
+.blog-recap-content h2 {
+    margin-top: 4rem;
+    break-after: avoid;
+    break-inside: avoid;
+    -webkit-column-break-after: avoid; /* for older Safari/Chrome */
+    -webkit-column-break-inside: avoid;
+}
+
+.blog-recap-content p {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.blog-recap-content img {
+    display: block;
+    margin: 0 auto;
+}

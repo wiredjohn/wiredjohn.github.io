@@ -1,5 +1,5 @@
 ---
-layout: blogpost-recap
+layout: blogpost-recap-columns
 name: "Recap September 2025"
 tags: RECAP WEB-DESIGN GRAPHIC-DESIGN
 ---

@@ -8,22 +8,25 @@ layout: default
     {{page.name}}
 </section>-->
 
-<div class="blog-content">
-    <h1>{{page.name}}</h1>
+<div class="blog-recap-content">
+    <header>
+        <h1>{{page.name}}</h1>
 
-    <p class="tag-container">
-        {% for tag in page.tags %}
-        <span class="tag {{tag | downcase}}">{{tag}}</span>
-        {% endfor %}
-    </p>
+        <p class="tag-container">
+            {% for tag in page.tags %}
+            <span class="tag {{tag | downcase}}">{{tag}}</span>
+            {% endfor %}
+        </p>
 
-    <p>{{ page.date | date_to_string }}</p>
+        <p>{{ page.date | date_to_string }}</p>
+    </header>
 
     <ol id="index"></ol>
-
     {{page.content}}
 
-    {% include blog-prev-next.html %}
+    <footer>
+        {% include blog-prev-next.html %}
+    </footer>
 </div>
 
 <script>
