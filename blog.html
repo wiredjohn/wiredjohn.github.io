@@ -30,6 +30,9 @@ permalink: /blog
             {{ item.date | date_to_string }}
         </div>
         <div class="title">
+            {% if item.path contains '_drafts/' %}
+            [DRAFT]
+            {% endif %}
             <a href="{{ item.url }}">{{ item.name }}</a>
         </div>
         <div class="arrow">

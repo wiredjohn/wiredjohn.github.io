@@ -436,6 +436,10 @@ ol {
     break-inside: avoid;
     -webkit-column-break-after: avoid; /* for older Safari/Chrome */
     -webkit-column-break-inside: avoid;
+
+    a {
+        color: $primary-font-color;
+    }
 }
 
 .blog-recap-content p {
@@ -447,4 +451,10 @@ ol {
 .blog-recap-content img {
     display: block;
     margin: 0 auto;
+}
+
+.blog-recap-content article {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    column-break-inside: avoid;
 }

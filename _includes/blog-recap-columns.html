@@ -1,0 +1,26 @@
+{% for title in page.items %}
+  {% assign item = site.recap_items | where: "title", title | first %}
+  {% if item %}
+<article>
+    <h2>
+        {% if item.link_url and item.link_url != "" %}
+        <a href="{{ item.link_url }}">{{ item.title }}</a>
+        {% else %}
+        {{ item.title }}
+        {% endif %}
+    </h2>
+    <p>{{ item.content | markdownify }}</p>
+
+    {% assign images = item.img_src %}
+    {% if images %}
+    {% if images.size %}
+    {% for img in images %}
+    <img src="{{ page.img_dir }}{{ img }}" alt="{{ item.img_alt }}" class="mb-1" />
+    {% endfor %}
+    {% else %}
+    <img src="{{ page.img_dir }}{{ images }}" alt="{{ item.img_alt }}" />
+    {% endif %}
+    {% endif %}
+</article>
+  {% endif %}
+{% endfor %}
