@@ -1,0 +1,95 @@
+---
+name: I Made a Font
+description: 
+layout: blogpost
+tags: FONTS TYPOGRAPHY
+---
+<link rel="stylesheet" href="/assets/css/font-face/jblock.css">
+<script src="/assets/scripts/FontDemo.js"></script>
+<style>
+    .jblock {
+        font-family: 'JBlock';
+        font-size: 3em;
+    }
+        .jblock.display {
+            text-shadow: 0px 10px 0px red;
+            color: white;
+            text-align: center;
+            animation: shadow-wiggle 2s ease-in-out infinite;
+        }
+
+        @keyframes shadow-wiggle {
+            0% {
+                text-shadow: 0px 10px 0px red;
+            }
+            20% {
+                text-shadow: 0px -10px 0px red;
+            }
+            40% {
+                text-shadow: -10px 10px 0px red;
+            }
+            60% {
+                text-shadow: 10px -10px 0px red;
+            }
+            80% {
+                text-shadow: -10px -10px 0px red;
+            }
+        }
+</style>
+
+<p>
+    I mentioned in my <a href="/2025/11/30/recap-november-2025">November 2025 recap</a> that I found a bitmap font editor: <a href="https://www.pentacom.jp/pentacom/bitfontmaker2" target="_blank">https://www.pentacom.jp/pentacom/bitfontmaker2</a>.
+</p>
+<p>
+    I immediately wanted to make something with it. I've dabbled with other font editors but nothing comes close to how simple this is.
+</p>
+<p>
+    So&hellip;
+</p>
+
+<p class="jblock display">
+    Here it is: JBLOCK!
+</p>
+
+<p>
+    <a href="#Demo">Go to a full font-demo</a>.
+</p>
+
+<p>
+    JBLOCK is a 14x14 pixel, uppercase only, monospace font. 
+</p>
+
+<p>
+    The intention when designing this was to make each character occupy as much space as possible while still being recognisable. I started off with a 13x10 pixel rectangle in the editor and deleted pixels to create each glyph. 
+</p>
+
+<p>
+    There are a number of technical and practical limitations with this font:
+</p>
+<ul>
+    <li>It only has uppercase characters, lowercase letters are duplicates of the uppercase</li>
+    <li>There are no ascenders or descenders, with the exception of a couple of special characters that creep slightly past the baseline and x-height</li>
+    <li>Only basic Latin characters are supported</li>
+    <li>I'm not satisfied with the numerals, it's not clear that some of them aren't letters. Specifically '2' looks like 'Z'</li>
+    <li>Very illegible and not suitable for longer blocks of text. Minimum readable size is about 24px</li>
+</ul>
+
+<p>But above all, it's a pain to read. </p>
+
+<p>This was a fun little challenge for myself. I have no intention to actually use this for anything, but feel free to download the .ttf if you want it.</p>
+
+<p class="jblock text-center">&#x263A;</p>
+
+<p>Side-quest within a side-quest: I made a little script to demo fonts when making this page. This is what you see at the bottom of this page.</p>
+
+<p>You simply tell the script what container to append elements to, the name of your font-family and the base font-size.</p>
+
+<p>The demo script takes care of the rest, creating elements to showcase the font at different sizes, the full character set and how the font reads in a bigger block.</p>
+
+<p>I might refine this some more and write a dedicated post on it.</p>
+
+<div id="Demo"></div>
+
+<script>
+    DemoFont(document.getElementById("Demo"), "JBlock", 32);
+</script>
