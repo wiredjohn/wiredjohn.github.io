@@ -1,4 +1,4 @@
 @font-face {
     font-family: 'JBlock';
-    src: url('JBlock.ttf') format('truetype'), /* Safari, Android, iOS */
+    src: url('JBlock.woff2') format('woff2'), url('JBlock.woff') format('woff'), url('JBlock.ttf') format('truetype');
 }
