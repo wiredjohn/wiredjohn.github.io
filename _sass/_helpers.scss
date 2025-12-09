@@ -30,3 +30,8 @@
 .text-center {
     text-align: center;
 }
+
+/*https://stackoverflow.com/questions/163628/making-email-addresses-safe-from-bots-on-a-webpage#answer-41566570*/
+.cryptedmail:after {
+    content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
+}

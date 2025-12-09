@@ -314,9 +314,9 @@ ol {
 .blog-post-list {
     .post {
         display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        margin-bottom: 1em;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 1.5em;
 
         .date {
             flex-grow: 0;
@@ -343,12 +343,14 @@ ol {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
     .blog-post-list {
         font-size: 1rem;
 
         .post {
             margin-bottom: 0.3em;
+            flex-direction: row;
+            gap: 1rem;
 
             .arrow {
                 display: block;

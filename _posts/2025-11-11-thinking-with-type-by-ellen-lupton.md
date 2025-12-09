@@ -1,7 +1,7 @@
 ---
 layout: blogpost
 name: "Thinking With Type by Ellen Lupton"
-tags: TYPOGRAPHY BOOK
+tags: TYPOGRAPHY BOOK-REVIEW
 ---
 
 ![Thinking With Type by Ellen Lupton Book Cover](/assets/img/blog/thinking-with-type/TWT_cover_screenshot.png)
