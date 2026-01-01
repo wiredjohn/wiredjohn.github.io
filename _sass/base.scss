@@ -442,6 +442,10 @@ ol {
     a {
         color: $primary-font-color;
     }
+
+    :hover {
+        font-style: italic;
+    }
 }
 
 .blog-recap-content p {
