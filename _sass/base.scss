@@ -211,56 +211,6 @@ h3 {
     white-space: nowrap;
 }
 
-/*.tag.html {
-    background-color: #e44d26;
-}
-
-.tag.css {
-    background-color: #254bdd;
-}
-
-.tag.javascript {
-    background-color: #e8d44d;
-    color: #000;
-}
-
-.tag.c-sharp {
-    background-color: #631f75;
-}
-
-.tag.rambling {
-    background-color: #147300;
-}
-
-.tag.animation {
-    background: linear-gradient( 270deg, red, blue, red, blue, red );
-    background-size: 200% 100%;*/ /* ensures pattern repeats cleanly */
-    /*animation: rainbowShift 4s linear infinite;
-}*/
-
-@keyframes rainbowShift {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
-/*.tag.test {
-    background-color: red;
-}
-
-.tag.typography {
-    background-color: #ffffd3;
-    color: #000;
-}
-
-.tag.recap {
-    background-color: #8e007f;
-}*/
-
 .tag-container {
     line-height: 1.5rem;
 }
