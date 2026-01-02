@@ -14,7 +14,7 @@ layout: default
 
         <p class="tag-container">
             {% for tag in page.tags %}
-            <span class="tag {{tag | downcase}}">{{tag}}</span>
+            <span class="tag {{tag | downcase}}">[{{tag}}]</span>
             {% endfor %}
         </p>
 

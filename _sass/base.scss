@@ -204,16 +204,14 @@ h3 {
 }
 
 .tag {
-    background-color: #3c3c3c;
-    color: #fff;
-    padding: 2px 5px;
-    border-radius: 25px;
+    background-color: $beige;
+    color: $blue;
     text-decoration: none;
     font-size: 0.9em;
     white-space: nowrap;
 }
 
-.tag.html {
+/*.tag.html {
     background-color: #e44d26;
 }
 
@@ -236,9 +234,9 @@ h3 {
 
 .tag.animation {
     background: linear-gradient( 270deg, red, blue, red, blue, red );
-    background-size: 200% 100%; /* ensures pattern repeats cleanly */
-    animation: rainbowShift 4s linear infinite;
-}
+    background-size: 200% 100%;*/ /* ensures pattern repeats cleanly */
+    /*animation: rainbowShift 4s linear infinite;
+}*/
 
 @keyframes rainbowShift {
     0% {
@@ -250,7 +248,7 @@ h3 {
     }
 }
 
-.tag.test {
+/*.tag.test {
     background-color: red;
 }
 
@@ -261,7 +259,7 @@ h3 {
 
 .tag.recap {
     background-color: #8e007f;
-}
+}*/
 
 .tag-container {
     line-height: 1.5rem;

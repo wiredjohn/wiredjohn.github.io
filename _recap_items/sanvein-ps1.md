@@ -1,6 +1,6 @@
 ---
 title: "Sanvein on PS1"
-link_url: https://www.froyotam.info
+link_url: ~
 img_src: 
   - sanvein1.webp
   - sanvein2.webp

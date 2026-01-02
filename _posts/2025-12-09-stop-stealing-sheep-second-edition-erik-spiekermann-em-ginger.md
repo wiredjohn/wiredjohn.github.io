@@ -1,7 +1,8 @@
 ---
 layout: blogpost
-name: "Stop Stealing Sheep (Second Edition) by Erik Spiekermann & E.M. Ginger"
+name: "Stop Stealing Sheep by Erik Spiekermann & E.M. Ginger"
 tags: TYPOGRAPHY BOOK-REVIEW
+redirect_from: /2025/12/09/stop-stealing-sheep-second-edition-erik-spiekermann-em-ginger
 ---
 
 ![Stop Stealing Sheep & find out how type works (second edition) book cover](/assets/img/blog/stop-stealing-sheep/cover.jpg)
