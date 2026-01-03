@@ -15,10 +15,10 @@
     {% if images %}
     {% if images.size %}
     {% for img in images %}
-    <img src="{{ page.img_dir }}{{ img }}" alt="{{ item.img_alt }}" class="mb-1" />
+    <img src="{{ page.img_dir }}{{ img }}" loading="lazy" alt="{{ item.img_alt }}" class="mb-1" />
     {% endfor %}
     {% else %}
-    <img src="{{ page.img_dir }}{{ images }}" alt="{{ item.img_alt }}" />
+    <img src="{{ page.img_dir }}{{ images }}" loading="lazy" alt="{{ item.img_alt }}" />
     {% endif %}
     {% endif %}
 </article>
