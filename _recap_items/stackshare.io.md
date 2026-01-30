@@ -1,6 +1,6 @@
 ---
 title: "Tech Stack Database: stackshare.io"
-link_url: stackshare.io
+link_url: https://stackshare.io/
 img_src: 
 img_alt: 
 ---

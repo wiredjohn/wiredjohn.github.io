@@ -3,6 +3,14 @@
     margin-bottom: 2rem;
 }
 
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
 .mb-1 {
     margin-bottom: 1rem !important;
 }
@@ -34,4 +42,8 @@
 /*https://stackoverflow.com/questions/163628/making-email-addresses-safe-from-bots-on-a-webpage#answer-41566570*/
 .cryptedmail:after {
     content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
+}
+
+.italic {
+    font-style: italic;
 }

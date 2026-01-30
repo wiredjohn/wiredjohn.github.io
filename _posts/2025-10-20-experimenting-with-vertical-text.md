@@ -7,12 +7,12 @@ tags: CSS WEB-DESIGN
 ![Fed.gif](/assets/img/blog/vertical-text/fed.gif)
 
 <p style="text-align: center;">
-	(<a href="/work/vertical-text">check it out</a>)
+	(<a href="/work/vertical-text/">check it out</a>)
 </p>
 
 I've been playing around with a few different design elements, namely vertical text, justified text, sticky elements and flex. 
 
-I used these elements to create [this page](/work/vertical-text).
+I used these elements to create [this page](/work/vertical-text/).
 
 Vertical text is achieved using ```text-orientation: upright;``` in most cases. I also did this by setting ```width: .9rem;``` in others places to force the word to wrap onto multple lines, breaking on each character. 
 

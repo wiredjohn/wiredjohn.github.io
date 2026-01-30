@@ -1,6 +1,14 @@
-url: "https://wiredjohn.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://wiredjohn.com"
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "wiredjohn.com" # the name of your site, e.g. ACME Corp.
+title: "wiredjohn.com"
+description: "Web development and design blog by John, featuring real projects, experiments, and mindless rambling."
+author:
+  name: WiredJohn
+
+twitter:
+  card: summary_large_image
+
+# logo: /assets/img/common/logo.gif
 
 plugins:
   - jekyll-feed
