@@ -22,4 +22,10 @@ include:
 permalink: /:categories/:year/:month/:day/:title
 
 collections:
-  - recap_items    
+  recap_items:
+    output: false
+
+  test:
+    output: true
+    permalink: /test/:name/
+
