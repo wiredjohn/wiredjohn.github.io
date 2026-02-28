@@ -1,7 +1,7 @@
 ---
 title: "ch4ch.com Animated Navigation"
 link_url: https://ch4ch.com/
-img_src: ch4ch.com.gif
+img_src: ch4ch.com.webp
 img_alt: The aninated 3D navigation on ch4ch.com
 ---
 

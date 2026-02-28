@@ -1,7 +1,7 @@
 ---
 title: "Game Dev: Mike Klubnika"
 link_url: https://mikeklubnika.com/
-img_src: mikeklubnika.com.gif
+img_src: mikeklubnika.com.webp
 img_alt: The animated and interactive project navigation on game developer Mike Klubnika's homepage
 ---
 
