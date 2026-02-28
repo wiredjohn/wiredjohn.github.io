@@ -418,3 +418,18 @@ ol {
     margin: 0 auto;
     width: 100%;
 }
+
+/*article:has(:target) {
+    animation: recap-article-focus 1s forwards alternate-reverse;
+}
+
+@keyframes recap-article-focus {
+    from {
+        box-shadow: none;
+        border-radius: 0;
+    }
+    to {
+        box-shadow: 0 0 20px 5px #ffffbf;
+        border-radius: 8px;
+    }
+}*/

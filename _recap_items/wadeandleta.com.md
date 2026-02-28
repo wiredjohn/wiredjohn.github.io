@@ -2,7 +2,7 @@
 title: "Designers: Wade and Leta"
 link_url: https://wadeandleta.com/
 img_src: "wadeandleta.com.png"
-img_alt: Website homepage by bicflame
+img_alt: Wade and Leta designers website homepage
 ---
 
 *Wade and Leta are a collaborative duo whose practice spans sculpture, painting, installation, and spatial design.*
