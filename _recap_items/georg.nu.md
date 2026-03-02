@@ -6,6 +6,7 @@ img_src:
   - the-golf-course.png
   - trenches.webp
 img_alt: The website and artwork of Swedish artist Georg Jutvall
+loading: eager
 ---
 
 Georg Jutvall is a Swedish artist I've followed for a long time. This month they released a website to sell their work and it's pretty cool. 

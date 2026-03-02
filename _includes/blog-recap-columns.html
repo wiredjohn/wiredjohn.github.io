@@ -10,17 +10,17 @@
         {% endif %}
     </h2>
     <p>{{ item.content | markdownify }}</p>
-
+    {% assign loading = item.loading | default: "lazy" %}
     {% assign images = item.img_src %}
     {% if images %}
-    {% if images.size %}
-    {% for img in images %}
-    <img src="{{ page.img_dir }}{{ img }}" loading="lazy" alt="{{ item.img_alt }}" class="mb-1" />
-    {% endfor %}
-    {% else %}
-    <img src="{{ page.img_dir }}{{ images }}" loading="lazy" alt="{{ item.img_alt }}" />
-    {% endif %}
-    {% endif %}
+        {% if images.size %}
+            {% for img in images %}
+                <img src="{{ page.img_dir }}{{ img }}" loading="{{ loading }}" alt="{{ item.img_alt }}" class="mb-1" />
+            {% endfor %}
+            {% else %}
+                <img src="{{ page.img_dir }}{{ images }}" loading="{{ loading }}" alt="{{ item.img_alt }}" />
+            {% endif %}
+        {% endif %}
 </article>
-  {% endif %}
+    {% endif %}
 {% endfor %}

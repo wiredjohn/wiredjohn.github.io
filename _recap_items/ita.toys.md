@@ -6,6 +6,7 @@ img_src:
   - ita-profile.png
   - ita-pet.png
 img_alt: Webpage designs by Ita Toys
+loading: eager
 ---
 
 Ita Toys is the Neocities site of a Japanese-Fashion blogger. 
