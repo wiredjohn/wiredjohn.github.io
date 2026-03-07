@@ -2,34 +2,109 @@
 layout: default
 title: Blog
 permalink: /blog
+container-override: "align-items-start"
 ---
 
 <h1>Blog</h1>
 
-<div class="blog-post-list">
+<!--<div class="tags">
+    <span class="tag-list">
+        {% assign tags = site.tags | sort %}
+        {% for tag in tags %}
+        <input type="checkbox" id="{{ tag[0] }}" name="{{ tag[0] }}" value="{{ tag[0] }}" onchange="FilterByTags()">
+        <label for="{{ tag[0] }}">[{{ tag[0] }}]</label>
+        {% endfor %}
+    </span>
+</div>-->
+
+<ul class="blog-post-list">
     {% assign sorted-posts = site.posts | sort: 'date' | reverse %}
     {% for item in sorted-posts %}
-    <div class="post">
-        <div class="date">
-            {{ item.date | date_to_string }}
-        </div>
-        <div class="title">
-            {% if item.path contains '_drafts/' %}
-            [DRAFT]
-            {% endif %}
-            <a href="{{ item.url }}">{{ item.name }}</a>
-        </div>
-        <div class="arrow">
-            <hr />
-        </div>
-        <div class="tags">
-            <span class="tag-list">
-                {% assign reversed-tags = item.tags | reverse %}
-                {% for tag in reversed-tags %}
-                    <span class="tag {{tag | downcase}}">[{{tag}}]</span>
-                {% endfor %}
-            </span>
-        </div>
-    </div>
+    <li class="post {{ item.tags | join: " " }}">
+        <a href="{{ item.url }}">
+            <time class="date" datetime="{{ item.date | date: "%Y-%m-%d"  }}">
+                {{ item.date | date_to_string }}
+            </time>
+            <h2 class="title">
+                {% if item.path contains '_drafts/' %}
+                [DRAFT]
+                {% endif %}
+                {{ item.name }}
+            </h2>
+            <span class="arrow" aria-hidden="true"></span>
+            <div class="tags">
+                <ul class="tag-list">
+                    {% assign reversed-tags = item.tags | reverse %}
+                    {% for tag in reversed-tags %}
+                    <li class="tag {{tag | downcase}}">[{{tag}}]</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </a>
+    </li>
     {% endfor %}
-</div>
+</ul>
+
+<script>
+    let posts = document.querySelectorAll(".post");
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let params = new URLSearchParams(window.location.search);
+        let tags = params.get("tags");
+
+        if (tags) {
+            tags = tags.split(",");
+
+            for (tag of tags) {
+                document.querySelector(`#${tag}`).checked = true;
+            }
+
+            FilterByTags();
+        }
+    });
+
+    function HideAllPosts() {
+        for (let post of posts) {
+            post.classList.add("d-none");
+        }
+    }
+
+    function ShowAllPosts() {
+        for (let post of posts) {
+            post.classList.remove("d-none");
+        }
+    }
+
+    function FilterByTags() {
+        let filterButtons = document.querySelectorAll(".tag-list input[type='checkbox']:checked");
+        let filters = Array.from(filterButtons).map(i => i.value);
+        console.table(filters);
+
+        if (filters.length == 0) {
+            ShowAllPosts();
+        }
+        else {
+            HideAllPosts();
+
+            for (let post of posts) {
+                if (filters.some(tag => post.classList.contains(tag))) {
+                    post.classList.remove("d-none");
+                }
+            }
+        }
+
+        UpdateURL(filters);
+    }
+
+    function UpdateURL(filters) {
+        let url = new URL(window.location);
+
+        if (filters.length === 0) {
+            url.searchParams.delete("tags");
+        } else {
+            url.searchParams.set("tags", filters.join(","));
+        }
+
+        history.replaceState(null, "", url);
+    }
+</script>
