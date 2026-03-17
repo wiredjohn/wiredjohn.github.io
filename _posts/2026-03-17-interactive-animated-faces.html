@@ -1,0 +1,359 @@
+---
+    layout: blogpost
+    name: Interactive Animated Faces
+    tags: ANIMATION WEB-DESIGN CSS
+---
+
+<style>
+    section {
+        margin-bottom: 2rem;
+    }
+
+    .frame-container, .frame-container2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 320px;
+        position: relative;
+    }
+
+    .frame {
+        background-position: 0 -452px;
+        background-image: url('/assets/img/work/face/faces-spritesheet.png');
+        background-repeat: no-repeat;
+        width: 167px;
+        height: 226px;
+    }
+
+    .frame-controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid white;
+        margin-bottom: 1rem;
+    }
+
+        .frame-controls .control {
+            width: 167px;
+            height: 226px;
+            width: 40px;
+            height: 100px;
+            /*width: 14vw;
+            height: 33vh;*/
+        }
+
+        .frame-controls.grid .control {
+            border: 1px solid rgba(0, 255, 0, 0.3);
+        }
+
+            .frame-controls.grid .control:hover {
+                background-color: rgba(0, 255, 0, 0.3);
+            }
+
+
+
+    .frame-container:has(.frame-controls .control:nth-child(1):hover) .frame {
+        background-position: 0 0;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(2):hover) .frame {
+        background-position: -167px 0;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(3):hover) .frame {
+        background-position: -334px 0;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(4):hover) .frame {
+        background-position: -501px 0;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(5):hover) .frame {
+        background-position: -668px 0;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(6):hover) .frame {
+        background-position: 0 -226px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(7):hover) .frame {
+        background-position: -167px -226px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(8):hover) .frame {
+        background-position: -334px -226px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(9):hover) .frame {
+        background-position: -501px -226px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(10):hover) .frame {
+        background-position: -668px -226px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(11):hover) .frame {
+        background-position: 0 -452px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(12):hover) .frame {
+        background-position: -167px -452px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(13):hover) .frame {
+        background-position: -334px -452px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(14):hover) .frame {
+        background-position: -501px -452px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(15):hover) .frame {
+        background-position: -668px -452px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(16):hover) .frame {
+        background-position: 0 -678px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(17):hover) .frame {
+        background-position: -167px -678px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(18):hover) .frame {
+        background-position: -334px -678px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(19):hover) .frame {
+        background-position: -501px -678px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(20):hover) .frame {
+        background-position: -668px -678px;
+    }
+
+    .frame-container:has(.frame-controls .control:nth-child(21):hover) .frame {
+        background-position: 0 -904px;
+    }
+
+
+    .d-flex-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    @media(min-width: 768px) {
+        .d-flex-row {
+            flex-direction: row;
+        }
+    }
+
+    .frame-container2 {
+        min-height: 320px;
+    }
+
+        .frame-container2:has(.frame-controls .control:nth-child(1):hover) .frame {
+            background-position: 0 0;
+        }
+
+        .frame-container2:has(.frame-controls .control:nth-child(2):hover) .frame {
+            background-position: -178px 0;
+        }
+
+        .frame-container2:has(.frame-controls .control:nth-child(3):hover) .frame {
+            background-position: -356px 0;
+        }
+
+        .frame-container2:has(.frame-controls .control:nth-child(4):hover) .frame {
+            background-position: -534px 0;
+        }
+
+        .frame-container2:has(.frame-controls .control:nth-child(5):hover) .frame {
+            background-position: -712px 0;
+        }
+
+        .frame-container2:has(.frame-controls .control:nth-child(6):hover) .frame {
+            background-position: -890px 0;
+        }
+
+        .frame-container2:has(.frame-controls .control:nth-child(7):hover) .frame {
+            background-position: -1068px 0;
+        }
+
+        .frame-container2:has(.frame-controls .control:nth-child(8):hover) .frame {
+            background-position: -1246px 0;
+        }
+
+        .frame-container2:has(.frame-controls .control:nth-child(9):hover) .frame {
+            background-position: -1424px 0;
+        }
+
+        .frame-container2 .frame-controls {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+            .frame-container2 .frame-controls .control {
+                width: 100px;
+                height: 100px;
+            }
+
+        .frame-container2 .frame {
+            background-color: white;
+            background-image: url('/assets/img/work/face/face2-sheet2.png');
+            height: 220px;
+            width: 178px;
+            background-position: -712px 0;
+        }
+</style>
+
+
+<p>
+    Recently I've been thinking about choppy animated faces. The kind that uses photographs of real people at a super low frame-rate, clearly in an attempt to look realistic at a time when tech couldn't achieve it.
+</p>
+<p>
+    Think FMV's, 90's digital rotoscoping and <a href="https://store.steampowered.com/app/252710/The_Last_Express_Gold_Edition/" target="_blank">The Last Express</a>.
+</p>
+<p>
+    There's something either creepy or charming about this technique whenever I see it. The result is always weirdly nice or horrifying. I've been thinking about how this can be applied to the web and now that's what I'm subjecting you to.
+</p>
+<p>
+    The goal being to create a face that responds to mouse movements.
+</p>
+
+
+<h2>The Imagery</h2>
+
+<p>I found this set of headshots from some scientific study that I liked. There's a variety of emotions with not a lot of in-between frames so animating the shots together would get the choppy effect I'm going for.</p>
+<img src="/assets/img/work/face/original-ref.png" />
+
+<p>Dumped the image into <a href="https://www.aseprite.org/" target="_blank">Aseprite</a>, sliced up the frames and added flipped copies of the left facing images to create a 180 degree turn.</p>
+<img src="/assets/img/work/face/aesprite.png" />
+
+<p>Here's the isolated animations for each expression.</p>
+
+<section class="d-flex-row">
+    <figure>
+        <img src="/assets/img/work/face/angry.gif" />
+        <figcaption>Angry Face</figcaption>
+    </figure>
+    <figure>
+        <img src="/assets/img/work/face/neutral.gif" />
+        <figcaption>Neutral Face</figcaption>
+    </figure>
+    <figure>
+        <img src="/assets/img/work/face/smile.gif" />
+        <figcaption>Happy Face</figcaption>
+    </figure>
+</section>
+
+<section class="d-flex-row">
+    <figure>
+        <img src="/assets/img/work/face/all.gif" />
+        <figcaption>All Faces</figcaption>
+    </figure>
+</section>
+
+<p>Now I have a spritesheet containing all frames for the 180 degree turns for each expression.</p>
+
+
+<h2>Putting it on the Web</h2>
+
+<p>My idea was to display the image as a single frame from a spritesheet using the CSS <code>background-image</code> and <code>background-position</code> properties, then overlay a grid which will change the <code>background-position</code> to display a different frame from the spritesheet depending on which cell from the grid was hovered.</p>
+
+<p>This is what you see below. The top row is the angry face images, middle row is neutral and the happy faces are on the bottom row. Her face turns relative to the column you're hovering.</p>
+
+<div class="frame-container">
+    <div class="frame"></div>
+    <div id="EmotionGrid" class="frame-controls grid">
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+    </div>
+</div>
+
+<div class="text-center">
+    <input type="checkbox" id="EmotionsShowGrid" name="EmotionsShowGrid" checked="checked" onchange="ToggleGrid('EmotionGrid')" />
+    <label for="EmotionsShowGrid">Show Grid Overlay</label>
+</div>
+
+<p>
+    It's works exactly how I pictured it. She's horrific.
+</p>
+<p>
+    This was hacked together just for this page so all the <code>background-position</code>'s of the overlay cells were manually set, along with the number of cells to display proportionate to the number of frames and their positions.
+</p>
+<p>
+    If I were to actually use this for something I'd write a sass mixin to spit out the right number of <code>nth-child</code> styles based on the number of frames and the width of the frames in that spritesheet.
+</p>
+
+
+<h3>Further Usage</h3>
+
+<p>A better use for this (what I actually had in mind before I found that creepy woman) is to have the face follow your cursor.</p>
+
+<div class="frame-container2">
+    <div class="frame"></div>
+    <div id="DirectionalGrid" class="frame-controls grid">
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+    </div>
+</div>
+<div class="text-center">
+    <input type="checkbox" id="DirectionalShowGrid" name="DirectionalShowGrid" checked="checked" onchange="ToggleGrid('DirectionalGrid')" />
+    <label for="DirectionalShowGrid">Show Grid Overlay</label>
+</div>
+
+<p>
+    I may actually end up doing something with this if I can think of a cool enough application. I know there's other, more modern, fully CSS solutions to transform the direction of images and even 3D models to follow the cursor - but something about the choppiness of these real photographs really appeals to me.
+</p>
+
+<p>
+    We'll see what I come up with.
+</p>
+
+<section>
+    <h3>References</h3>
+    <p>All images used without permission, <a href="https://www.youtube.com/watch?v=jJLlGmXKvyo" target="_blank">mwuhahaha</a>.</p>
+    <p><a href="https://www.researchgate.net/figure/Example-of-stimuli-Pictures-comprised-faces-of-seven-females-and-seven-males-The_fig3_255955120" target="_blank">https://www.researchgate.net/figure/Example-of-stimuli-Pictures-comprised-faces-of-seven-females-and-seven-males-The_fig3_255955120</a></p>
+    <p><a href="https://uk.pinterest.com/pin/306596687135581279/" target="_blank">https://uk.pinterest.com/pin/306596687135581279/</a></p>
+</section>
+
+
+<script>
+    function ToggleGrid(grid) {
+        document.getElementById(grid).classList.toggle("grid");
+    }
+</script>
