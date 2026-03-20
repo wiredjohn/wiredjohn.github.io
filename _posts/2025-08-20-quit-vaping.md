@@ -14,7 +14,7 @@ The expense is another layer of insanity.
 
 On the 14th I just decided to stop. I've quit in the past (smoking and vaping) - the biggest factor in whether you're actually successful is being mentally ready to stop. I'm definitely there. 
 
-To motivate myself I threw together this quit and dirty webpage that counts the time since I quit and shows some other tips and motivators. 
+To motivate myself I threw together this quick and dirty webpage that counts the time since I quit and shows some other tips and motivators. 
 
 I'm hoping the soul crushing shame of having to reset the timer back down to zero is enough incentive to never touch a vape again. 
 

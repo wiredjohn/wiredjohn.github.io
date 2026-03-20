@@ -36,8 +36,7 @@ layout: default
     let indexList = document.getElementById("index");
 
     for (let index of indexes) {
-        var id = index.innerText.replaceAll(" ", "-").replaceAll("#", "").replaceAll("&", "").replaceAll(".", "").replaceAll(",", "").toLowerCase();
-        index.id = id;
+        var id = index.id;        
 
         var anchor = document.createElement("a");
         anchor.href = `#${id}`;

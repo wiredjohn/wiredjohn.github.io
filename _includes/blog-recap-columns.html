@@ -2,7 +2,7 @@
   {% assign item = site.recap_items | where: "title", title | first %}
   {% if item %}
 <article>
-    <h2>
+    <h2 id="{{item.title | slugify}}">
         {% if item.link_url and item.link_url != "" %}
         <a href="{{ item.link_url }}">{{ item.title }}</a>
         {% else %}

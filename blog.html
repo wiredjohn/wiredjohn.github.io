@@ -5,9 +5,16 @@ permalink: /blog
 container-override: "align-items-start"
 ---
 
-<h1>Blog</h1>
+<header class="title-with-button">
+    <h1>Blog</h1>
 
-<!--<div class="tags">
+    <section>
+        <button class="btn-secondary d-none" id="ButtonFiltersClear" type="button" aria-label="Clear Filters">X</button>        
+        <button class="btn-primary uppercase toggle" id="ButtonFilterTags" type="button">Filter</button>
+    </section>
+</header>
+
+<div id="TagFilters" class="tags d-none">
     <span class="tag-list">
         {% assign tags = site.tags | sort %}
         {% for tag in tags %}
@@ -15,7 +22,7 @@ container-override: "align-items-start"
         <label for="{{ tag[0] }}">[{{ tag[0] }}]</label>
         {% endfor %}
     </span>
-</div>-->
+</div>
 
 <ul class="blog-post-list">
     {% assign sorted-posts = site.posts | sort: 'date' | reverse %}
@@ -47,6 +54,7 @@ container-override: "align-items-start"
 
 <script>
     let posts = document.querySelectorAll(".post");
+    let btn_filters_clear = document.getElementById("ButtonFiltersClear");
 
     document.addEventListener("DOMContentLoaded", function () {
         let params = new URLSearchParams(window.location.search);
@@ -59,9 +67,24 @@ container-override: "align-items-start"
                 document.querySelector(`#${tag}`).checked = true;
             }
 
+            document.getElementById("TagFilters").classList.toggle("d-none");
+            document.getElementById("ButtonFilterTags").classList.add("active");
             FilterByTags();
         }
     });
+
+    document.getElementById("ButtonFilterTags").addEventListener("click", function () {
+        document.getElementById("TagFilters").classList.toggle("d-none");
+        this.classList.toggle("active");
+    })
+    btn_filters_clear.addEventListener("click", function () {
+        let filterButtons = document.querySelectorAll(".tag-list input[type='checkbox']:checked");
+        for (let button of filterButtons) {
+            button.checked = false;
+        }
+
+        FilterByTags();
+    })
 
     function HideAllPosts() {
         for (let post of posts) {
@@ -81,9 +104,11 @@ container-override: "align-items-start"
         console.table(filters);
 
         if (filters.length == 0) {
+            btn_filters_clear.classList.add("d-none");
             ShowAllPosts();
         }
         else {
+            btn_filters_clear.classList.remove("d-none");
             HideAllPosts();
 
             for (let post of posts) {

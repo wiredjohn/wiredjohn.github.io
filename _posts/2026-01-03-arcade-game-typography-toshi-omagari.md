@@ -1,7 +1,7 @@
 ---
 layout: blogpost
 name: "Arcade Game Typography by Toshi Omagari"
-tags: TYPOGRAPHY BOOK-REVIEW
+tags: TYPOGRAPHY FONTS BOOK-REVIEW
 ---
 
 ![Arcade Game Typography by Toshi Omagari page spread](/assets/img/blog/video-game-typography/video-game-typography.jpg)
