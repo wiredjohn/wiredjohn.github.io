@@ -210,6 +210,7 @@ h3 {
         background-color: $background-color;
         color: $font-color;
         word-break: keep-all;
+        user-select: none;
     }
 
     label:hover {
@@ -409,8 +410,14 @@ ol {
 
 @media(min-width: 1200px) {
     .blog-recap-content {
-        column-count: 3;
+        column-count: 2;
         max-width: 100%;
+    }
+}
+
+@media(min-width: 1600px) {
+    .blog-recap-content {
+        column-count: 3;
     }
 }
 
@@ -484,6 +491,7 @@ ol {
 
 button {
     font-size: 1rem;
+    font-family: $font-primary, $font-primary-backup;
     border: none;
     padding: .2rem 1rem;
 }
