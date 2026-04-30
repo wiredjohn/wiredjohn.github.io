@@ -154,19 +154,74 @@ h3 {
     margin: 0 auto;
     max-width: 1000px;
     padding: 0 1rem 1rem 1rem;
-    /*
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 70vh;*/
 }
 
 .home-splash {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
     h1 {
-        font-size: 1rem;
-        font-weight: normal;
+        font-size: clamp(6vw,10vw,24vw);
+        margin: 0;
+        line-height: 1;
+
+        span {
+            color: rgba(255, 255, 191, .5);
+            margin-left: 2ch;
+        }
+    }
+
+    .splash-content {
+        grid-column: 2;
+    }
+
+    .splash-contact {
+        grid-column: 2;
+        align-content: end;
+        box-shadow: 0 .5em 0 rgba(255, 255, 191, .5);
+    }
+
+    .img-wrapper {
+        grid-column: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-width: 100px;
+            /*padding: 2rem 2rem 0;*/
+            animation: spin360 5s linear infinite;
+        }
     }
 }
+
+@media(min-width: 768px) {
+    .home-splash {
+        h1 {
+            font-size: clamp(3vw,5vw,12vw);
+        }
+    }
+
+    .grid-row {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1400px) {
+    .home-splash {
+        .grid-row {
+            grid-template-columns: repeat(4, 1fr);
+
+            .splash-contact {
+                grid-column: 3;
+            }
+        }
+    }
+}
+
 
 .blog-content {
     word-wrap: anywhere;
@@ -478,7 +533,7 @@ ol {
         border-radius: 8px;
     }
 }*/
- 
+
 .tags {
     overflow: hidden;
 }
@@ -486,7 +541,7 @@ ol {
 .title-with-button {
     display: flex;
     align-items: center;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
 
 button {
@@ -495,14 +550,17 @@ button {
     border: none;
     padding: .2rem 1rem;
 }
+
 button:hover {
     cursor: pointer;
 }
+
 .btn-primary {
     background-color: $button-primary-background-color;
     color: $button-primary-font-color;
     border: 1px solid $button-primary-font-color;
 }
+
 .btn-primary:hover {
     background-color: $button-primary-font-color;
     color: $button-primary-background-color;
@@ -525,6 +583,7 @@ button.toggle::after {
     content: "+";
     padding-left: .5rem;
 }
+
 button.toggle.active::after {
     content: "-";
 }
